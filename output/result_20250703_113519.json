@@ -1,0 +1,228 @@
+{
+  "scan_metadata": {
+    "target_url": "https://elitery.com",
+    "scan_timestamp": "2025-07-03T11:35:19.297317",
+    "scanner_version": "1.0.0",
+    "total_files_scanned": 66
+  },
+  "semgrep_results": {
+    "error": "Semgrep not installed or not accessible",
+    "results": [],
+    "summary": {
+      "total_files": 66,
+      "total_findings": 0,
+      "high_severity": 0,
+      "medium_severity": 0,
+      "low_severity": 0
+    }
+  },
+  "grype_results": {
+    "error": "Grype not installed or not accessible",
+    "results": [],
+    "summary": {
+      "total_dependencies": 0,
+      "total_vulnerabilities": 0,
+      "critical_severity": 0,
+      "high_severity": 0,
+      "medium_severity": 0,
+      "low_severity": 0,
+      "negligible_severity": 0
+    }
+  },
+  "trufflehog_results": {
+    "results": [
+      {
+        "secret_type": "AWS Secret Key",
+        "file_path": "temp\\https___www.googletagmanager.com_gtag_js_id=G-F64BXWDJZL.js",
+        "line_number": 287,
+        "raw_secret": "0123456789abcdefghijklmnopqrstuvwxyzABCD",
+        "masked_secret": "0123********************************ABCD",
+        "confidence": "MEDIUM",
+        "verified": false,
+        "scanner": "Custom Regex",
+        "line_content": "function Ve(a){if(a instanceof Aa||a instanceof rd||a instanceof nd||a instanceof Ua||a instanceof yd||a instanceof wd||a===null||a===void 0||typeof a===\"string\"||typeof a===\"number\"||typeof a===\"boolean\")return a};var Xe=function(a){this.message=a};function Ye(a){a.Jr=!0;return a};var Ze=Ye(function(a){return typeof a===\"string\"});function $e(a){var b=\"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_\"[a];return b===void 0?new Xe(\"Value \"+a+\" can not be encoded in web-safe base64 dictionary.\"):b};function af(a){switch(a){case 1:return\"1\";case 2:case 4:return\"0\";default:return\"-\"}};var bf=/^[1-9a-zA-Z_-][1-9a-c][1-9a-v]\\d$/;function cf(a,b){for(var c=\"\",d=!0;a>7;){var e=a&31;a>>=5;d?d=!1:e|=32;c=\"\"+$e(e)+c}a<<=2;d||(a|=32);return c=\"\"+$e(a|b)+c}"
+      },
+      {
+        "secret_type": "AWS Secret Key",
+        "file_path": "temp\\https___www.googletagmanager.com_gtag_js_id=G-F64BXWDJZL.js",
+        "line_number": 399,
+        "raw_secret": "ChAI8LGTwwYQx+2Y4ZmlzdxVEiUAhIAAVqI1cgzM",
+        "masked_secret": "ChAI********************************cgzM",
+        "confidence": "HIGH",
+        "verified": false,
+        "scanner": "Custom Regex",
+        "line_content": "var Fj={},Gj=(Fj[J.m.nb]=1,Fj[J.m.od]=2,Fj[J.m.xc]=2,Fj[J.m.za]=3,Fj[J.m.af]=4,Fj[J.m.Cg]=5,Fj[J.m.Jc]=6,Fj[J.m.eb]=6,Fj[J.m.ob]=6,Fj[J.m.gd]=6,Fj[J.m.Tb]=6,Fj[J.m.zb]=6,Fj[J.m.pb]=7,Fj[J.m.Wb]=9,Fj[J.m.Dg]=10,Fj[J.m.Pb]=11,Fj),Hj={},Ij=(Hj.unknown=13,Hj.standard=14,Hj.unique=15,Hj.per_session=16,Hj.transactions=17,Hj.items_sold=18,Hj);var fb=[];function Jj(a,b){b=b===void 0?!1:b;for(var c=Object.keys(a),d=l(Object.keys(Gj)),e=d.next();!e.done;e=d.next()){var f=e.value;if(c.includes(f)){var g=Gj[f],h=b;h=h===void 0?!1:h;db(\"GTAG_EVENT_FEATURE_CHANNEL\",g);h&&(fb[g]=!0)}}};var Kj=function(){this.C=new Set;this.H=new Set},Mj=function(a){var b=Lj.R;a=a===void 0?[]:a;var c=[].concat(ta(b.C)).concat([].concat(ta(b.H))).concat(a);c.sort(function(d,e){return d-e});return c},Nj=function(){var a=[].concat(ta(Lj.R.C));a.sort(function(b,c){return b-c});return a},Oj=function(){var a=Lj.R,b=Ui.Mq;a.C=new Set;if(b!==\"\")for(var c=l(b.split(\"~\")),d=c.next();!d.done;d=c.next()){var e=Number(d.value);isNaN(e)||a.C.add(e)}};var Pj={},Qj=Oi(14,\"5710\"),Rj=Qi(15,Number(\"0\")),Sj=Oi(19,\"dataLayer\");Oi(20,\"\");Oi(16,\"ChAI8LGTwwYQx+2Y4ZmlzdxVEiUAhIAAVqI1cgzMRqQtdTSWXp2V0T2S5Naz7FAuMGF/DkRPFc39GgKJ2Q\\x3d\\x3d\");var Tj={__cl:1,__ecl:1,__ehl:1,__evl:1,__fal:1,__fil:1,__fsl:1,__hl:1,__jel:1,__lcl:1,__sdl:1,__tl:1,__ytl:1},Uj={__paused:1,__tg:1},Vj;for(Vj in Tj)Tj.hasOwnProperty(Vj)&&(Uj[Vj]=1);var Wj=Ni(11,vb(\"\")),Xj=!1,Yj,Zj=!1;Zj=!0;"
+      },
+      {
+        "secret_type": "AWS Secret Key",
+        "file_path": "temp\\https___www.googletagmanager.com_gtag_js_id=G-F64BXWDJZL.js",
+        "line_number": 415,
+        "raw_secret": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmn",
+        "masked_secret": "ABCD********************************klmn",
+        "confidence": "MEDIUM",
+        "verified": false,
+        "scanner": "Custom Regex",
+        "line_content": "9),p=!0):p=!1}if(p)return!1;if(d===1)if(f.length>=1)Ll(f[0]);else{if(n)return db(\"TAGGING\",10),!1}else f.length>=d?Ll(f[0]):n&&Ll(m[0]);Fc(a,c,{allow:\"join-ad-interest-group\"},{taggingId:b,loadTime:zb()});return!0}function Ll(a){try{a.parentNode.removeChild(a)}catch(b){}};function Ml(a,b,c){var d,e=a.GooglebQhCsO;e||(e={},a.GooglebQhCsO=e);d=e;if(d[b])return!1;d[b]=[];d[b][0]=c;return!0};var Nl=function(a){for(var b=[],c=0,d=0;d<a.length;d++){var e=a.charCodeAt(d);e<128?b[c++]=e:(e<2048?b[c++]=e>>6|192:((e&64512)==55296&&d+1<a.length&&(a.charCodeAt(d+1)&64512)==56320?(e=65536+((e&1023)<<10)+(a.charCodeAt(++d)&1023),b[c++]=e>>18|240,b[c++]=e>>12&63|128):b[c++]=e>>12|224,b[c++]=e>>6&63|128),b[c++]=e&63|128)}return b};vl();Al()||sl(\"iPod\");sl(\"iPad\");!sl(\"Android\")||wl()||vl()||ul()||sl(\"Silk\");wl();!sl(\"Safari\")||wl()||(tl()?0:sl(\"Coast\"))||ul()||(tl()?0:sl(\"Edge\"))||(tl()?rl(\"Microsoft Edge\"):sl(\"Edg/\"))||(tl()?rl(\"Opera\"):sl(\"OPR\"))||vl()||sl(\"Silk\")||sl(\"Android\")||Bl();var Ol={},Pl=null,Ql=function(a){for(var b=[],c=0,d=0;d<a.length;d++){var e=a.charCodeAt(d);e>255&&(b[c++]=e&255,e>>=8);b[c++]=e}var f=4;f===void 0&&(f=0);if(!Pl){Pl={};for(var g=\"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789\".split(\"\"),h=[\"+/=\",\"+/\",\"-_=\",\"-_.\",\"-_\"],m=0;m<5;m++){var n=g.concat(h[m].split(\"\"));Ol[m]=n;for(var p=0;p<n.length;p++){var q=n[p];Pl[q]===void 0&&(Pl[q]=p)}}}for(var r=Ol[f],t=Array(Math.floor(b.length/3)),u=r[64]||\"\",v=0,w=0;v<b.length-2;v+=3){var y=b[v],"
+      },
+      {
+        "secret_type": "AWS Secret Key",
+        "file_path": "temp\\https___www.googletagmanager.com_gtag_js_id=G-F64BXWDJZL.js",
+        "line_number": 444,
+        "raw_secret": "eyIwIjoiSUQiLCIxIjoiSUQtSkkiLCIyIjpmYWxz",
+        "masked_secret": "eyIw********************************YWxz",
+        "confidence": "MEDIUM",
+        "verified": false,
+        "scanner": "Custom Regex",
+        "line_content": "function Nn(){if(rn(nn.Z.Bg)===void 0){var a=function(){qn(nn.Z.Bg,pb());Mn=0};a();x.setInterval(a,864E5)}else tn(nn.Z.Bg,function(){Mn=0});Mn=0}function On(){Nn();En(\"v\",\"3\");En(\"t\",\"t\");En(\"pid\",function(){return String(rn(nn.Z.Bg))});En(\"seq\",function(){return String(++Mn)});En(\"exp\",ik());Ic(x,\"pagehide\",Ln)};var Pn=[\"ad_storage\",\"analytics_storage\",\"ad_user_data\",\"ad_personalization\"],Qn=[J.m.od,J.m.xc,J.m.Zd,J.m.Rb,J.m.wc,J.m.Qa,J.m.Pa,J.m.eb,J.m.ob,J.m.Tb],Rn=!1,Sn=!1,Tn={},Un={};function Vn(){!Sn&&Rn&&(Pn.some(function(a){return Um.containerScopedDefaults[a]!==1})||Wn(\"mbc\"));Sn=!0}function Wn(a){fl&&(En(a,\"1\"),In())}function Xn(a,b){if(!Tn[b]&&(Tn[b]=!0,Un[b]))for(var c=l(Qn),d=c.next();!d.done;d=c.next())if(N(a,d.value)){Wn(\"erc\");break}};function Yn(a){db(\"HEALTH\",a)};var Zn={wp:Oi(22,\"eyIwIjoiSUQiLCIxIjoiSUQtSkkiLCIyIjpmYWxzZSwiMyI6Imdvb2dsZS5jby5pZCIsIjQiOiIiLCI1Ijp0cnVlLCI2IjpmYWxzZSwiNyI6ImFkX3N0b3JhZ2V8YW5hbHl0aWNzX3N0b3JhZ2V8YWRfdXNlcl9kYXRhfGFkX3BlcnNvbmFsaXphdGlvbiJ9\")},$n={},ao=!1;function bo(){function a(){c!==void 0&&un(nn.Z.Gf,c);try{var e=rn(nn.Z.Gf);$n=JSON.parse(e)}catch(f){M(123),Yn(2),$n={}}ao=!0;b()}var b=co,c=void 0,d=rn(nn.Z.Gf);d?a(d):(c=tn(nn.Z.Gf,a),eo())}"
+      },
+      {
+        "secret_type": "AWS Secret Key",
+        "file_path": "temp\\https___www.googletagmanager.com_gtag_js_id=G-F64BXWDJZL.js",
+        "line_number": 497,
+        "raw_secret": "0123456789abcdefghijklmnopqrstuvwxyzABCD",
+        "masked_secret": "0123********************************ABCD",
+        "confidence": "MEDIUM",
+        "verified": false,
+        "scanner": "Custom Regex",
+        "line_content": "function zr(a){for(var b=\"1\",c=0;c<or.length;c++){var d=b,e,f=or[c],g=Um.delegatedConsentTypes[f];e=g===void 0?0:xr.hasOwnProperty(g)?12|xr[g]:8;var h=Nm();h.accessedAny=!0;var m=h.entries[f]||{};e=e<<2|yr(m.implicit);b=d+(\"\"+\"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_\"[e]+\"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_\"[yr(m.declare)<<4|yr(m.default)<<2|yr(m.update)])}var n=b,p=(sr()?1:0)<<3,q=(Ym()?1:0)<<2,r=rr(a);b=n+\"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_\"[p|"
+      },
+      {
+        "secret_type": "AWS Secret Key",
+        "file_path": "temp\\https___www.googletagmanager.com_gtag_js_id=G-F64BXWDJZL.js",
+        "line_number": 498,
+        "raw_secret": "0123456789abcdefghijklmnopqrstuvwxyzABCD",
+        "masked_secret": "0123********************************ABCD",
+        "confidence": "MEDIUM",
+        "verified": false,
+        "scanner": "Custom Regex",
+        "line_content": "q|r];return b+=\"\"+\"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_\"[Um.containerScopedDefaults.ad_storage<<4|Um.containerScopedDefaults.analytics_storage<<2|Um.containerScopedDefaults.ad_user_data]+\"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_\"[(Um.usedContainerScopedDefaults?1:0)<<2|Um.containerScopedDefaults.ad_personalization]}"
+      },
+      {
+        "secret_type": "AWS Secret Key",
+        "file_path": "temp\\https___www.googletagmanager.com_gtag_js_id=G-F64BXWDJZL.js",
+        "line_number": 500,
+        "raw_secret": "0123456789abcdefghijklmnopqrstuvwxyzABCD",
+        "masked_secret": "0123********************************ABCD",
+        "confidence": "MEDIUM",
+        "verified": false,
+        "scanner": "Custom Regex",
+        "line_content": "function Dr(){var a=\"0\",b=\"0\",c;var d=er();c=d.active?d.cmpId:void 0;typeof c===\"number\"&&c>=0&&c<=4095&&(a=\"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_\"[c>>6&63],b=\"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_\"[c&63]);var e=\"0\",f;var g=er();f=g.active?g.tcfPolicyVersion:void 0;typeof f===\"number\"&&f>=0&&f<=63&&(e=\"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_\"[f]);var h=0;jo()&&(h|=1);mr()===\"1\"&&(h|=2);hr()&&(h|=4);var m;var n=er();m=n.enableAdvertiserConsentMode!=="
+      },
+      {
+        "secret_type": "AWS Secret Key",
+        "file_path": "temp\\https___www.googletagmanager.com_gtag_js_id=G-F64BXWDJZL.js",
+        "line_number": 501,
+        "raw_secret": "0123456789abcdefghijklmnopqrstuvwxyzABCD",
+        "masked_secret": "0123********************************ABCD",
+        "confidence": "HIGH",
+        "verified": false,
+        "scanner": "Custom Regex",
+        "line_content": "void 0?n.enableAdvertiserConsentMode?\"1\":\"0\":void 0;m===\"1\"&&(h|=8);Nm().waitPeriodTimedOut&&(h|=16);return\"1\"+a+b+e+\"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_\"[h]}function Er(){return ho()===\"US-CO\"};var eg;function Fr(){var a=!1;return a}function Gr(){E(212)&&Yj&&fg(\"all\",function(a,b,c){var d=c.options;switch(b){case \"detect_link_click_events\":case \"detect_form_submit_events\":return(d==null?void 0:d.waitForTags)!==!0;case \"detect_youtube_activity_events\":return(d==null?void 0:d.fixMissingApi)!==!0;default:return!0}})};var Hr;function Ir(){if(uc===null)return 0;var a=Zc();if(!a)return 0;var b=a.getEntriesByName(uc,\"resource\")[0];if(!b)return 0;switch(b.deliveryType){case \"\":return 1;case \"cache\":return 2;case \"navigational-prefetch\":return 3;default:return 0}}var Jr={UA:1,AW:2,DC:3,G:4,GF:5,GT:12,GTM:14,HA:6,MC:7};"
+      },
+      {
+        "secret_type": "AWS Secret Key",
+        "file_path": "temp\\inline_1.js",
+        "line_number": 1,
+        "raw_secret": "com/channel/UCcBy0GxGRWBmokVVjs8BBzw/vid",
+        "masked_secret": "com/********************************/vid",
+        "confidence": "MEDIUM",
+        "verified": false,
+        "scanner": "Custom Regex",
+        "line_content": "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"WebPage\",\"@id\":\"https://elitery.com/\",\"url\":\"https://elitery.com/\",\"name\":\"Elitery - Your Elite IT Managed Services Partner\",\"isPartOf\":{\"@id\":\"https://elitery.com/#website\"},\"about\":{\"@id\":\"https://elitery.com/#organization\"},\"primaryImageOfPage\":{\"@id\":\"https://elitery.com/#primaryimage\"},\"image\":{\"@id\":\"https://elitery.com/#primaryimage\"},\"thumbnailUrl\":\"https://elitery.com/wp-content/uploads/2024/03/NEW-thumbnail-Elitery.png\",\"datePublished\":\"2021-07-29T15:15:08+00:00\",\"dateModified\":\"2025-06-18T04:56:35+00:00\",\"description\":\"Our expert IT Consultants build technology solutions for your organization. IT Managed Services, Cloud Managed Services, Cybersecurity, and DRaaS.\",\"breadcrumb\":{\"@id\":\"https://elitery.com/#breadcrumb\"},\"inLanguage\":\"en-US\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https://elitery.com/\"]}]},{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://elitery.com/#primaryimage\",\"url\":\"https://elitery.com/wp-content/uploads/2024/03/NEW-thumbnail-Elitery.png\",\"contentUrl\":\"https://elitery.com/wp-content/uploads/2024/03/NEW-thumbnail-Elitery.png\",\"width\":1200,\"height\":800,\"caption\":\"NEW thumbnail Elitery\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://elitery.com/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://elitery.com/#website\",\"url\":\"https://elitery.com/\",\"name\":\"Elitery\",\"description\":\"Kami Menyediakan Layanan Cloud Untuk Bisnis dan Perusahaan\",\"publisher\":{\"@id\":\"https://elitery.com/#organization\"},\"alternateName\":\"PT Data Sinergitama Jaya Tbk (Elitery)\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://elitery.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https://elitery.com/#organization\",\"name\":\"Elitery - Your Trusted IT Operation Partner\",\"url\":\"https://elitery.com/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://elitery.com/#/schema/logo/image/\",\"url\":\"https://elitery.com/wp-content/uploads/2022/08/ELITERY-LOGO-Black-2022.png\",\"contentUrl\":\"https://elitery.com/wp-content/uploads/2022/08/ELITERY-LOGO-Black-2022.png\",\"width\":225,\"height\":83,\"caption\":\"Elitery - Your Trusted IT Operation Partner\"},\"image\":{\"@id\":\"https://elitery.com/#/schema/logo/image/\"},\"sameAs\":[\"https://www.facebook.com/elitery.indo\",\"https://x.com/eliterycloud\",\"https://www.instagram.com/elitery.indo/\",\"https://www.linkedin.com/company/elitery/\",\"https://www.youtube.com/channel/UCcBy0GxGRWBmokVVjs8BBzw/videos\"]}]}"
+      }
+    ],
+    "summary": {
+      "total_files": 66,
+      "total_secrets": 9,
+      "high_confidence": 2,
+      "medium_confidence": 7,
+      "low_confidence": 0,
+      "verified_secrets": 0,
+      "secret_types": {
+        "AWS Secret Key": 9
+      },
+      "files_with_secrets": 2,
+      "scanners_used": [
+        "Custom Regex"
+      ]
+    },
+    "trufflehog_available": false
+  },
+  "downloaded_files": [
+    "temp\\https___elitery.com_wp-content_plugins_smart-slider-3_Public_SmartSlider3_Application_Frontend_A.js",
+    "temp\\https___elitery.com_wp-content_plugins_smart-slider-3_Public_SmartSlider3_Application_Frontend_A.js",
+    "temp\\https___elitery.com_wp-content_plugins_smart-slider-3_Public_SmartSlider3_Slider_SliderType_Simp.js",
+    "temp\\https___elitery.com_wp-content_plugins_smart-slider-3_Public_SmartSlider3_Widget_Bullet_Assets_d.js",
+    "temp\\https___elitery.com_wp-includes_js_jquery_jquery.min.js_ver=3.7.1.js",
+    "temp\\https___elitery.com_wp-includes_js_jquery_jquery-migrate.min.js_ver=3.4.1.js",
+    "temp\\https___elitery.com_wp-content_plugins_elementor_assets_lib_font-awesome_js_v4-shims.min.js_ver=.js",
+    "temp\\https___www.googletagmanager.com_gtag_js_id=G-F64BXWDJZL.js",
+    "temp\\https___www.googletagmanager.com_gtag_js_id=G-F64BXWDJZL.js",
+    "temp\\__js-na1.hs-scripts.com_22600239.js",
+    "temp\\_cdn-cgi_scripts_5c5dd728_cloudflare-static_email-decode.min.js",
+    "temp\\https___elitery.com_wp-content_themes_astra_assets_js_minified_frontend.min.js_ver=4.8.7.js",
+    "temp\\https___js.hs-scripts.com_22600239.js_integration=WordPress&ver=11.3.6.js",
+    "temp\\https___elitery.com_wp-content_plugins_wf-cookie-consent_js_cookiechoices.min.js_ver=6.7.2.js",
+    "temp\\https___elitery.com_wp-content_plugins_essential-addons-for-elementor-lite_assets_front-end_js_v.js",
+    "temp\\https___elitery.com_wp-content_uploads_essential-addons-elementor_eael-6496.js_ver=1750247795.js",
+    "temp\\https___elitery.com_wp-content_plugins_elementor_assets_js_webpack.runtime.min.js_ver=3.30.0.js",
+    "temp\\https___elitery.com_wp-content_plugins_elementor_assets_js_frontend-modules.min.js_ver=3.30.0.js",
+    "temp\\https___elitery.com_wp-includes_js_jquery_ui_core.min.js_ver=1.13.3.js",
+    "temp\\https___elitery.com_wp-content_plugins_elementor_assets_js_frontend.min.js_ver=3.30.0.js",
+    "temp\\https___elitery.com_wp-content_plugins_elementor_assets_lib_jquery-numerator_jquery-numerator.mi.js",
+    "temp\\https___elitery.com_wp-content_plugins_elementor_assets_lib_swiper_v8_swiper.min.js_ver=8.4.5.js",
+    "temp\\https___elitery.com_wp-content_uploads_essential-addons-elementor_eael-12583.js_ver=1750247795.js",
+    "temp\\https___elitery.com_wp-content_plugins_header-footer-elementor_inc_js_frontend.js_ver=2.4.2.js",
+    "temp\\https___elitery.com_wp-includes_js_dist_vendor_react.min.js_ver=18.3.1.1.js",
+    "temp\\https___elitery.com_wp-includes_js_dist_vendor_react-dom.min.js_ver=18.3.1.1.js",
+    "temp\\https___elitery.com_wp-includes_js_dist_escape-html.min.js_ver=6561a406d2d232a6fbd2.js",
+    "temp\\https___elitery.com_wp-includes_js_dist_element.min.js_ver=cb762d190aebbec25b27.js",
+    "temp\\https___elitery.com_wp-includes_js_dist_hooks.min.js_ver=4d63a3d491d11ffd8ac6.js",
+    "temp\\https___elitery.com_wp-includes_js_dist_i18n.min.js_ver=5e580eb46a90c2b997e6.js",
+    "temp\\https___elitery.com_wp-content_plugins_wp-whatsapp-chat_build_frontend_js_index.js_ver=88461af9c.js",
+    "temp\\https___elitery.com_wp-content_plugins_elementor-pro_assets_js_webpack-pro.runtime.min.js_ver=3..js",
+    "temp\\https___elitery.com_wp-content_plugins_elementor-pro_assets_js_frontend.min.js_ver=3.30.0.js",
+    "temp\\https___elitery.com_wp-content_plugins_elementor-pro_assets_js_elements-handlers.min.js_ver=3.30.js",
+    "temp\\https___elitery.com_wp-content_plugins_jet-tabs_assets_js_jet-tabs-frontend.min.js_ver=2.2.9.1.js",
+    "temp\\https___elitery.com_wp-content_plugins_jet-blog_assets_js_jet-blog.min.js_ver=2.4.4.1.js",
+    "temp\\inline_0.js",
+    "temp\\inline_1.js",
+    "temp\\inline_2.js",
+    "temp\\inline_3.js",
+    "temp\\inline_4.js",
+    "temp\\inline_5.js",
+    "temp\\inline_6.js",
+    "temp\\inline_7.js",
+    "temp\\inline_8.js",
+    "temp\\inline_9.js",
+    "temp\\inline_10.js",
+    "temp\\inline_11.js",
+    "temp\\inline_12.js",
+    "temp\\inline_13.js",
+    "temp\\inline_14.js",
+    "temp\\inline_15.js",
+    "temp\\inline_16.js",
+    "temp\\inline_17.js",
+    "temp\\inline_18.js",
+    "temp\\inline_19.js",
+    "temp\\inline_20.js",
+    "temp\\inline_21.js",
+    "temp\\inline_22.js",
+    "temp\\inline_23.js",
+    "temp\\inline_24.js",
+    "temp\\inline_25.js",
+    "temp\\inline_26.js",
+    "temp\\inline_27.js",
+    "temp\\inline_28.js",
+    "temp\\inline_29.js"
+  ],
+  "overall_summary": {
+    "total_files": 66,
+    "total_issues": 0,
+    "high_severity": 0,
+    "medium_severity": 0,
+    "low_severity": 0,
+    "total_secrets": 9,
+    "total_vulnerabilities": 0
+  }
+}

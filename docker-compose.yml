@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  sourcecode-scanner:
+    build: .
+    container_name: sourcecode-scanner
+    volumes:
+      # Mount current directory to /app in container
+      - .:/app
+      # Mount Docker socket for Grype to work
+      - /var/run/docker.sock:/var/run/docker.sock
+      # Persist output directory
+      - ./output:/app/output
+      - ./temp:/app/temp
+      - ./bot_output:/app/bot_output
+      - ./bot_temp:/app/bot_temp
+    environment:
+      - PYTHONPATH=/app
+      # Add any environment variables from .env file
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    working_dir: /app
+    # Keep container running for interactive use
+    stdin_open: true
+    tty: true
+    # Override default command for development
+    command: /bin/bash
+    
+  # Alternative service for running specific scans
+  scanner-cli:
+    build: .
+    container_name: sourcecode-scanner-cli
+    volumes:
+      - .:/app
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./output:/app/output
+      - ./temp:/app/temp
+    environment:
+      - PYTHONPATH=/app
+    env_file:
+      - .env
+    working_dir: /app
+    profiles:
+      - cli
+    # This service is for running one-off commands
+    command: python run.py
+
+volumes:
+  docker_sock:
+    external: true
